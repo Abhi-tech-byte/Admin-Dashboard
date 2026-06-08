@@ -3,7 +3,9 @@
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -22,38 +24,136 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+a,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
+.container {
+  display: grid;
+  /* height: 100vh; */
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 150px 1fr;
+}
 
-.dashboard{
-    display: grid;
-    gap: 15px;
+.dashboard {
+  display: grid;
+  gap: 80px;
+  grid-row: 1/3;
+  grid-template-rows: 100px 1fr 1fr;
+  background-color: rgba(0, 170, 255, 0.986);
+  font-weight: bold;
+  border: 3px solid black;
+
 }
-.upper-dashboard{
-    display: grid;
+
+.dashboard a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  /* background-color: yellow; */
+  display: grid;
+  grid-template-columns: 24px auto;
+  gap: 15px;
+
+
 }
-.lower-dashboard{
-    display: grid;
+
+.upper-dashboard {
+  display: grid;
+
+  gap: 30px;
+  padding: 10px;
+
+
+}
+
+.lower-dashboard {
+  display: grid;
+  padding: 10px;
+
+
+
+}
+
+.dashboard>h1 {
+  /* border: 3px solid green; */
+  color: white;
+  /* align-self: center; */
+  /* padding: 15px; */
+  padding: 20px 15px;
+
+}
+
+.navbar {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.content-page {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+
+}
+
+.projects {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.annoucments {
+  display: grid;
+}
+
+.trends {
+  display: grid;
+}
+
+img {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  display: inline;
 }
