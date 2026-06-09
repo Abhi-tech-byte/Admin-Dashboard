@@ -82,7 +82,7 @@ h6 {
   grid-template-rows: 100px 1fr 1fr;
   background-color: rgba(0, 170, 255, 0.986);
   font-weight: bold;
-  border: 3px solid black;
+  /* border: 3px solid black; */
 
 }
 
@@ -121,8 +121,13 @@ h6 {
   /* align-self: center; */
   /* padding: 15px; */
   padding: 20px 15px;
-
+  display: grid;
+  grid-template-columns: 24px 1fr ;
+  align-items: center;
+  gap: 10px;
 }
+
+
 
 .navbar {
   display: grid;
@@ -157,3 +162,65 @@ img {
   margin: 0;
   display: inline;
 }
+  
+h1>img{
+  height: 70px;
+}
+
+.top-nav{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+}
+
+.search-box{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 24px 1fr;
+  padding: 15px;
+  gap: 5px;
+}
+
+.search-box>input{
+  background-color: lightgrey;
+  border-style: none;
+  border-radius: 10px;
+  
+}
+.profile{
+  display: grid;
+  grid-template-columns: 24px auto 1fr;
+  align-items: center;
+  gap: 10px;
+  
+  
+}
+.profile-pic>img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px; 
+  }
+.profile-name{
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.bottom-nav{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+}
+.buttons{
+  all: unset;
+  cursor: pointer; 
+}
+
+
+
+
+  
+  
+
+
+  
+  
+  
