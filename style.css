@@ -214,6 +214,17 @@ h1>img{
   cursor: pointer; 
 }
 
+.content-page{
+  background-color: lightgray;
+  box-shadow: 5px 0.5px 10px  black;
+}
+
+.card{
+  background-color: white;
+  border-radius: 15px;
+  border-left: 10px solid orange;
+}
+
 
 
 
