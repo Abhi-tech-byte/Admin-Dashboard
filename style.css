@@ -1,7 +1,12 @@
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
+
+/* =====================================
+   RESET
+===================================== */
 
 *,
 *::before,
@@ -68,12 +73,59 @@ h6 {
   isolation: isolate;
 }
 
+/* =====================================
+   GLOBAL ELEMENTS
+   Stuff used throughout the page
+===================================== */
+
+img {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+h1 > img {
+  height: 70px;
+}
+
+.profile-pic > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  background-color: rgba(0, 170, 255, 0.986);
+  color: white;
+  border-radius: 15px;
+  padding: 5px 20px;
+}
+
+/* =====================================
+   MAIN PAGE LAYOUT
+===================================== */
+
 .container {
   display: grid;
   /* height: 100vh; */
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 150px 1fr;
 }
+
+.content-page {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-color: lightgray;
+  box-shadow: 5px 0.5px 10px black;
+}
+
+/* =====================================
+   SIDEBAR / DASHBOARD
+===================================== */
 
 .dashboard {
   display: grid;
@@ -83,67 +135,119 @@ h6 {
   background-color: rgba(0, 170, 255, 0.986);
   font-weight: bold;
   /* border: 3px solid black; */
+}
 
+.dashboard > h1 {
+  color: white;
+  /* align-self: center; */
+  /* padding: 15px; */
+  padding: 20px 15px;
+
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 10px;
+
+  /* border: 3px solid green; */
 }
 
 .dashboard a {
   color: white;
   text-decoration: none;
   padding: 5px;
-  /* background-color: yellow; */
+
   display: grid;
   grid-template-columns: 24px auto;
   gap: 15px;
 
-
+  /* background-color: yellow; */
 }
 
 .upper-dashboard {
   display: grid;
-
   gap: 30px;
   padding: 10px;
-
-
 }
 
 .lower-dashboard {
   display: grid;
   padding: 10px;
-
-
-
 }
 
-.dashboard>h1 {
-  /* border: 3px solid green; */
-  color: white;
-  /* align-self: center; */
-  /* padding: 15px; */
-  padding: 20px 15px;
-  display: grid;
-  grid-template-columns: 24px 1fr ;
-  align-items: center;
-  gap: 10px;
-}
-
-
+/* =====================================
+   TOP NAVBAR
+===================================== */
 
 .navbar {
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
 
-.content-page {
+.top-nav {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
 }
+
+.search-box {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 24px 1fr;
+  gap: 5px;
+  padding: 15px;
+}
+
+.search-box > input {
+  background-color: lightgrey;
+  border-style: none;
+  border-radius: 10px;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 24px auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* =====================================
+   BOTTOM NAVBAR
+   Greeting + action buttons
+===================================== */
+
+.bottom-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.greeting {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.greeting > .profile-pic {
+  grid-row: 1/3;
+}
+
+.greeting > .profile-pic > img {
+  height: auto;
+  width: auto;
+}
+
+/* =====================================
+   PROJECT AREA
+===================================== */
 
 .projects {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 10px;
 }
 
@@ -155,83 +259,13 @@ h6 {
   display: grid;
 }
 
-img {
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  margin: 0;
-  display: inline;
-}
-  
-h1>img{
-  height: 70px;
-}
+/* =====================================
+   CARDS
+===================================== */
 
-.top-nav{
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 20px;
-}
-
-.search-box{
-  display: grid;
-  align-items: center;
-  grid-template-columns: 24px 1fr;
-  padding: 15px;
-  gap: 5px;
-}
-
-.search-box>input{
-  background-color: lightgrey;
-  border-style: none;
-  border-radius: 10px;
-  
-}
-.profile{
-  display: grid;
-  grid-template-columns: 24px auto 1fr;
-  align-items: center;
-  gap: 10px;
-  
-  
-}
-.profile-pic>img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50px; 
-  }
-.profile-name{
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.bottom-nav{
-  display: grid;
-  grid-template-columns: 1fr 1fr ;
-}
-.buttons{
-  all: unset;
-  cursor: pointer; 
-}
-
-.content-page{
-  background-color: lightgray;
-  box-shadow: 5px 0.5px 10px  black;
-}
-
-.card{
+.card {
   background-color: white;
   border-radius: 15px;
   border-left: 10px solid orange;
 }
 
-
-
-
-  
-  
-
-
-  
-  
-  
