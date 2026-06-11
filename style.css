@@ -227,8 +227,8 @@ button {
 
 .greeting {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 75px 1fr;
+  /* grid-template-rows: 1fr 1fr; */
 }
 
 .greeting > .profile-pic {
@@ -237,7 +237,7 @@ button {
 
 .greeting > .profile-pic > img {
   height: auto;
-  width: auto;
+  width: 75px;
 }
 
 /* =====================================
