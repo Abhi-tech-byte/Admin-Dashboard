@@ -229,6 +229,7 @@ button {
   display: grid;
   grid-template-columns: 75px 1fr;
   /* grid-template-rows: 1fr 1fr; */
+  padding: 10px;
 }
 
 .greeting > .profile-pic {
@@ -238,6 +239,11 @@ button {
 .greeting > .profile-pic > img {
   height: auto;
   width: 75px;
+}
+
+.big-text{
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /* =====================================
